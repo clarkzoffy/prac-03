@@ -1,11 +1,15 @@
-score = float(input("Enter score: "))
-if score < 0:
-    print("Invalid score")
-elif score > 100:
+import random
+
+def ASD(score=random.uniform(-999, 999)):
+    if score < 0:
         print("Invalid score")
-elif score >= 90:
-        print("Excellent")
-elif score >= 50:
-        print("Passable")
-elif score < 50:
-    print("Bad")
+    else:
+        if score > 100:
+            print("Invalid score")
+        if 50 <= score < 90:
+            print("Passable")
+        if 90 <= score <= 100:
+            print("Excellent")
+    if 0 < score < 50:
+        print("Bad")
+ASD()
